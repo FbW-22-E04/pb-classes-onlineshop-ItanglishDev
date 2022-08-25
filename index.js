@@ -30,9 +30,11 @@ class Cart {
   }
 
   addProduct(shoppedProduct) {
-    if (shoppedProduct instanceof products) {
+
+    if (shoppedProduct instanceof Product) {
+
       this.products.push(shoppedProduct)
-      console.log(this.products.length.toString());
+      return `Total products ${this.products.length}`;
     }
     console.log(shoppedProduct, "is not available in the shop");
   }
@@ -46,7 +48,7 @@ class Cart {
   }
 
   getTotalItemsPrice() {
-    this.products.shoppedProduct.forEach(item => item + this.products.shoppedProduct.price)
+    this.products.shoppedProduct.forEach(item => item + this.products.shoppedProduct[price])
     console.log(item.toString());
   }
 }
