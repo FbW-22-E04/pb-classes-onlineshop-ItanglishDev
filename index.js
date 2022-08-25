@@ -40,7 +40,8 @@ class Cart {
   }
 
   getProductInfoCart() {
-    toText()
+    this.products.forEach(product => product.toText)
+    Product.toText()
   }
 
   toText() {
@@ -48,7 +49,9 @@ class Cart {
   }
 
   getTotalItemsPrice() {
-    this.products.shoppedProduct.forEach(item => item + this.products.shoppedProduct[price])
-    console.log(item.toString());
+    return this.product.reduce((acc, item) => acc += item.price, 0).toFixed(2)
+
+    // this.products.shoppedProduct.forEach(item => item + this.products.shoppedProduct[price])
+    // return `Total is ${item}`;
   }
 }
